@@ -15,7 +15,7 @@ async function loadApp()
         await mongo.connect();
         const userRoutes=require("./routes/users.route");
         const awsUpload=require("./routes/aws.route")
-        app.use(cors({origin:"https://srscreenrecorder.netlify.app/"}));
+        app.use(cors());
         app.use(cors());
         app.use(bodyParser.json());
         app.use(bodyParser.urlencoded({ extended: true }));
